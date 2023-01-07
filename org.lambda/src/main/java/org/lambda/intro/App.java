@@ -2,7 +2,9 @@ package org.lambda.intro;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 
@@ -32,30 +34,44 @@ public class App
 			System.out.println("printing line 2");
 			System.out.format("pprinting line %d\n", 3);
 		}).start();
-	
-	Employee john = new Employee("John Doe",30);
-	Employee paul = new Employee("Paul",25);
-	Employee jack = new Employee("Jack Hill", 40);
-	Employee snow= new Employee("Snow White", 22);
 
-	List<Employee> employees= new ArrayList<>();
-	employees.add(jack);
-	employees.add(snow);
-	employees.add(paul);
-	employees.add(john);
-	
-	Collections.sort(employees, new Comparator<Employee>() {
-		
-		public int compare(Employee e1, Employee e2) {
-			return e1.getName().compareTo(e2)
+		Employee john = new Employee("John Doe",30);
+		Employee paul = new Employee("Paul",25);
+		Employee jack = new Employee("Jack Hill", 40);
+		Employee snow= new Employee("Snow White", 22);
+
+		List<Employee> employees= new ArrayList<>();
+		employees.add(jack);
+		employees.add(snow);
+		employees.add(paul);
+		employees.add(john);
+
+		Collections.sort(employees, new Comparator<Employee>() {
+
+			public int compare(Employee e1, Employee e2) {
+				return e1.getName().compareTo(e2.getName());
+			}
+		});
+
+		for(Employee emp: employees) {
+			System.out.println(emp.getName());
 		}
-	});
-	
-	
+		System.out.println(">>>>>>in lambda>>>>>>>");
+		/*
+		 * employees.stream() .sorted((e1,e2) -> e1.getName().compareTo(e2.getName()))
+		 * .forEach(e -> System.out.println(e.getName()));
+		 */
+		
+		System.out.println(">>>>>>>Tim's implemenation>>>>>>>");
+		Collections.sort(employees, (employee1,employee2) -> 
+		employee1.getName().compareTo(employee2.getName()));
+		for(Employee employee:employees) {
+			System.out.println(employee.getName());
+		}
 
 	}
 
-}
+
 }
 
 class CodeToRun implements Runnable{
