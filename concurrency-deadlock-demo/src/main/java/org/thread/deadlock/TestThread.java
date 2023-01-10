@@ -3,7 +3,7 @@ package org.thread.deadlock;
  * this class is demonstrating thread deadlock.
  * Ordering of lock is importnent 
  */
-public class TestThreadDeadlock {
+public class TestThread {
 
 	public  static Object Lock1 = new Object();
 	public  static Object Lock2 = new Object();
@@ -11,8 +11,8 @@ public class TestThreadDeadlock {
 	
 	public static void main(String[] args) {
 		System.out.println("====Welcome to Thread Deadlock");
-		Thread t1 = new Thread(new ThreadDemo1());
-		Thread t2 = new Thread(new ThreadDemo2());
+		Thread t1 = new Thread(new ThreadDemo());
+		Thread t2 = new Thread(new ThreadDemo01());
 		t1.start();
 		t2.start();
 	}
@@ -20,10 +20,10 @@ public class TestThreadDeadlock {
 	
 }
 
-class ThreadDemo1 implements Runnable{
+class ThreadDemo implements Runnable{
 		public void run() {
-		synchronized (TestThreadDeadlock.Lock1){
-			System.out.println("ThreadDemo1 is holding the lock");
+		synchronized (TestThread.Lock1){
+			System.out.println("Thread1 is holding the lock");
 			try {
 				Thread.sleep(10);
 			}catch(InterruptedException ex) {
@@ -31,7 +31,7 @@ class ThreadDemo1 implements Runnable{
 			
 			System.out.println("Thread 1: waiting for lock2");
 			
-			synchronized (TestThreadDeadlock.Lock2) {
+			synchronized (TestThread.Lock2) {
 				System.out.println("Thread1: holding lock for Lock1 & Lock2 ");
 			}
 		}
@@ -40,16 +40,17 @@ class ThreadDemo1 implements Runnable{
 			
 }
 
-class ThreadDemo2 implements Runnable{
+class ThreadDemo01 implements Runnable{
 	
 	public void run() {
-		synchronized (TestThreadDeadlock.Lock2) {
-			System.out.println("ThreadDemo2 is holding the lock");
+		synchronized (TestThread.Lock1) {
+			System.out.println("Thread2 is holding the lock 1");
 			try {
 				Thread.sleep(10);
 			}catch(InterruptedException ex) {}
+			System.out.println("Thread 2: Waiting for lock 2...");
 			
-			synchronized (TestThreadDeadlock.Lock1) {
+			synchronized (TestThread.Lock2) {
 				System.out.println("Thread2: holding lock for 1 & 2");
 			}
 		}
