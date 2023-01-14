@@ -1,4 +1,4 @@
-package java.bascis.algo.quicksort;
+package bascis.algo.quicksort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package java.bascis.algo.linearsearch;
+package bascis.algo.linearsearch;
 
 public class App {
 

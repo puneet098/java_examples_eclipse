@@ -1,4 +1,4 @@
-package java.bascis;
+package bascis;
 
 /**
  * Hello world!

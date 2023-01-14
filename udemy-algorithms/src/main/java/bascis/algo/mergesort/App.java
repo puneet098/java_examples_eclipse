@@ -1,4 +1,4 @@
-package java.bascis.algo.mergesort;
+package bascis.algo.mergesort;
 
 public class App {
 

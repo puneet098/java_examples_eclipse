@@ -1,4 +1,4 @@
-package java.bascis.algo.selectionsort;
+package bascis.algo.selectionsort;
 
 public class App {
 

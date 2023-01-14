@@ -1,4 +1,4 @@
-package java.bascis.algo.recursion;
+package bascis.algo.recursion;
 
 public class App {
 

@@ -1,4 +1,4 @@
-package java.bascis.algo.binarysearch;
+package bascis.algo.binarysearch;
 
 public class TestApp {
 

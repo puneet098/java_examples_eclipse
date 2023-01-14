@@ -1,4 +1,4 @@
-package java.bascis.algo.insertionsort;
+package bascis.algo.insertionsort;
 
 public class App {
 
