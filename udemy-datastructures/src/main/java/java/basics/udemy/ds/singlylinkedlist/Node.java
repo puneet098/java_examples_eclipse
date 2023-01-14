@@ -1,0 +1,10 @@
+package java.basics.udemy.ds.singlylinkedlist;
+
+public class Node {
+	public int data;
+	public Node next;
+	
+	public void displayNode(){
+		System.out.println("{ "+ data + " } ");
+	}
+}
