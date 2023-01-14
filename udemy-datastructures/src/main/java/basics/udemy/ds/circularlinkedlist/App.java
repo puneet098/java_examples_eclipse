@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.circularlinkedlist;
+package basics.udemy.ds.circularlinkedlist;
 
 public class App {
 

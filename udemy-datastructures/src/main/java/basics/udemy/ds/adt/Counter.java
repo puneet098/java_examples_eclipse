@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.adt;
+package basics.udemy.ds.adt;
 
 public class Counter {
 

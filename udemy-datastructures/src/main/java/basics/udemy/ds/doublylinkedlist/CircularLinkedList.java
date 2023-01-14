@@ -1,6 +1,6 @@
-package java.basics.udemy.ds.doublylinkedlist;
+package basics.udemy.ds.doublylinkedlist;
 
-import java.basics.udemy.ds.singlylinkedlist.Node;
+import basics.udemy.ds.singlylinkedlist.Node;
 
 public class CircularLinkedList {
 	

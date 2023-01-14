@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.graph;
+package basics.udemy.ds.graph;
 
 public class BetterGraph {
    

@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.doublylinkedlist;
+package basics.udemy.ds.doublylinkedlist;
 
 public class App {
 

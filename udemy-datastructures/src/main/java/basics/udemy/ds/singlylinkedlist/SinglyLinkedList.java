@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.singlylinkedlist;
+package basics.udemy.ds.singlylinkedlist;
 
 public class SinglyLinkedList {
 	private Node first;

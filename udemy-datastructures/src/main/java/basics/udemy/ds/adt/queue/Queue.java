@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.adt.queue;
+package basics.udemy.ds.adt.queue;
 
 public class Queue {
 	

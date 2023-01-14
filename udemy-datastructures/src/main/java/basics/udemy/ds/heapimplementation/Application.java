@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.heapimplementation;
+package basics.udemy.ds.heapimplementation;
 
 public class Application {
 

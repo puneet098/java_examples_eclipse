@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.adt;
+package basics.udemy.ds.adt;
 
 import java.util.LinkedList;
 
@@ -14,6 +14,7 @@ public class App {
 		System.out.println(myCounter.getCurrentValue());
 		
 		LinkedList myList = new LinkedList();
+
 	}
 
 }

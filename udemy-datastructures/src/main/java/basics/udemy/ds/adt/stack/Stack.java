@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.adt.stack;
+package basics.udemy.ds.adt.stack;
 
 public class Stack {
 

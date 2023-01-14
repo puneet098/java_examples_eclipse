@@ -1,4 +1,4 @@
-package java.basics.udemy.ds.binarysearchtree;
+package basics.udemy.ds.binarysearchtree;
 
 public class Application {
 

@@ -1,4 +1,4 @@
-package java.basics.udemy.ds;
+package basics.udemy.ds;
 
 /**
  * Hello world!
